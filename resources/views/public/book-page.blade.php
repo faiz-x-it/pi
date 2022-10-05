@@ -3,6 +3,7 @@
     Bookshop - All books
 @endsection
 @section('content')
+
     <section class="main-content">
         <div class="container">
             <div class="row">
@@ -17,7 +18,7 @@
                             <div class="alert alert-warning my-4">No books available</div>
                         @else
                             <div class="card my-4">
-                                <div class="card-header bg-dark">
+                                <div class="card-header bg-primary">
                                     <h4 class="text-white">All books</h4>
                                 </div>
                                 @if(isset($categoryName))
@@ -54,9 +55,9 @@
                                                     </div>
                                                     <div class="pbook-price mb-3">
                                                         @if($book->discount_rate)
-                                                            <span class="line-through mr-3">&#8369;{{$book->init_price}}</span>
+                                                            <span class="line-through mr-3">Rp. {{$book->init_price}}</span>
                                                         @endif
-                                                        <span class=""><strong>&#8369;{{$book->price}}</strong></span>
+                                                        <br><span class=""><strong>Rp. {{$book->price}}</strong></span>
                                                     </div>
                                                 </div>
                                             </div>

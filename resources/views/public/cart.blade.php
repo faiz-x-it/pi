@@ -6,7 +6,7 @@
 @section('content')
     <div class="container">
         <div class="card my-4">
-            <div class="card-header bg-dark text-white">
+            <div class="card-header bg-primary text-white">
                 <h4><i class="fas fa-shopping-cart"></i> Shopping cart</h4>
             </div>
             <div class="card-body">
@@ -32,7 +32,7 @@
 
                       <td>{{$item->name}}</td>
 
-                      <td>&#8369;{{$item->price}}</td>
+                      <td>Rp. {{$item->price}}</td>
 
                       <td>
                         <span class="quantity-input mr-2 mb-2 d-flex flex-row">
@@ -42,7 +42,7 @@
                         </span>
                       </td>
 
-                      <td>&#8369;{{$item->subtotal()}}</td>
+                      <td>Rp. {{$item->subtotal()}}</td>
                     </tr>
                     </tbody>
                     @endforeach
@@ -50,7 +50,7 @@
                     <tr>
                         <td colspan="4"><a href="{{route('all-books')}}" class="text-primary">Continue shopping</a></td>
                         <td><strong>Total</strong></td>
-                        <td>&#8369;{{Cart::total()}}</td>
+                        <td>Rp. {{Cart::total()}}</td>
                     </tr>
                     <tr>
                         <td colspan="4"></td>

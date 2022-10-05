@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Bookshop - User home</title>
-    <!-- Favicon icon -->
-    <link rel="icon" href="{{asset('/')}}assets/img/favicon-2.png" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('/')}}assets/css/all.min.css">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{asset('/')}}assets/css/bootstrap.min.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="{{asset('/')}}assets/css/style.css">
+
+    <meta charset="utf-8">
+    <title>PT Kuantum Buku Sejahtera | Penerbit dengan Pelayanan Terbaik dan Terpercaya!</title>
+    <meta name="description" content="Quantum Book hadir di tengah-tengah masyarakat untuk melengkapi dan memenuhi permasalahan kebutuhan buku-buku khususnya buku SMK, Serta menjadi media untuk memenuhi kebutuhan ilmu bagi dunia pendidikan kejuruan yang lebih baik.">
+    <meta name="keywords" content="quantum, book, quantum book, buku, sejahtera, malang, jawa timur, indonesia">
+    <meta name="author" content="Vokanesia">
+    <!-- Stylesheets -->
+    <link href="http://127.0.0.1/quantumbook-main/themes/css/bootstrap.css" rel="stylesheet">
+    <link href="http://127.0.0.1/quantumbook-main/themes/css/style.css" rel="stylesheet">
+    <link href="http://127.0.0.1/quantumbook-main/themes/css/responsive.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/2a563a7704.js"></script>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&amp;family=Nunito+Sans:wght@300;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Color Switcher Mockup -->
+    <link href="http://127.0.0.1/quantumbook-main/themes/css/color-switcher-design.css" rel="stylesheet">
+
+    <!-- Color Themes -->
+    <link id="theme-color-file" href="http://127.0.0.1/quantumbook-main/themes/css/color-themes/default-theme.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="http://127.0.0.1/quantumbook-main/themes/images/ico-quantum-book.png" type="image/x-icon">
+    <link rel="icon" href="http://127.0.0.1/quantumbook-main/themes/images/ico-quantum-book.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
 </head>
 
 <body>
+        <!-- NAVBAR -->
+        @include('layouts.includes.navbar')
+        <!-- NAVBAR END -->
+        
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1 border-bottom" id="nav-top">
+{{-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-1 border-bottom" id="nav-top">
     <div class="container">
         <a href="{{route('bookshop.home')}}" class="logo-img"><img src="{{asset('/')}}assets/img/logo.png" alt=""></a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-collapse">
@@ -63,10 +90,10 @@
             </ul>
         </div>
     </div>
-</nav>
+</nav> --}}
 <!-- NAVBAR END -->
 <!-- HEADER -->
-<section class="header py-2 bg-light">
+{{-- <section class="header py-2 bg-light">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -100,33 +127,10 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- HEADER END -->
 
 @yield('content')
-
-<footer class="py-3 text-center border-top bg-light">
-    <div class="container">
-        <div class="go-to-top mb-2">
-            <a href="#nav-top" class="text-muted" title="Go to top"><i class="fas fa-angle-double-up"></i></a>
-        </div>
-        <div class="footer-text">
-            Copyright &copy; Bookshop Management System. All Right Reserved. <span id="year"></span>
-        </div>
-        <div class="social-icon mt-2">
-        <span class="mr-2">
-          <a href="#" class="text-primary"><i class="fab fa-facebook fa-2x"></i></a>
-        </span>
-            <span class="mr-2">
-          <a href="#" class="text-secondary"><i class="fab fa-github fa-2x"></i></a>
-        </span>
-            <span class="mr-2">
-          <a href="#" class="text-warning"><i class="fab fa-stack-overflow fa-2x"></i></a>
-        </span>
-        </div>
-    </div>
-</footer>
-
 
 
 <!-- jQuery -->

@@ -17,7 +17,7 @@
 
 Route::get('/', 'BookshopHomeController@index')->name('bookshop.home');
 
-Route::get('/all-books', 'BookshopHomeController@allBooks')->name('all-books');
+Route::get('/produk', 'BookshopHomeController@allBooks')->name('all-books');
 Route::get('/discount-books', 'BookshopHomeController@discountBooks')->name('discount-books');
 Route::get('/category/{category}', 'BookshopHomeController@category')->name('category');
 Route::get('/author/{author}', 'BookshopHomeController@author')->name('author');

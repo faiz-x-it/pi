@@ -10,7 +10,7 @@ Bookshop - Book details
                 <div class="col-md-8">
                     <div class="content-area">
                         <div class="card my-4">
-                            <div class="card-header bg-dark">
+                            <div class="card-header bg-primary">
                                 <h4 class="text-white">Book Details</h4>
                             </div>
                             <div class="card-body">
@@ -38,11 +38,11 @@ Bookshop - Book details
                                         <div class="book-price mb-2">
                                             <span class="mr-1">Price</span>
                                             @if($book->discount_rate)
-                                                <span></span><strong class="line-through">&#8369;{{$book->init_price}}</strong>
+                                                <span></span><strong class="line-through">Rp. {{$book->init_price}}</strong>
                                             @endif
-                                                <span>now</span><strong>&#8369;{{$book->price}}</strong>
+                                                <span>now</span><strong>Rp. {{$book->price}}</strong>
                                             @if($book->discount_rate)
-                                                <div><strong class="text-danger">Save &#8369;{{$book->init_price - $book->price}}</strong></div>
+                                                <div><strong class="text-danger">Save Rp. {{$book->init_price - $book->price}}</strong></div>
                                             @endif
                                         </div>
                                         <div class="book-category mb-2 py-1 d-flex flex-row border-top border-bottom">

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div class="my-4 p-3 bg-dark text-white"><h4 class="m-0">Checkout Page</h4></div>
+        <div class="my-4 p-3 bg-primary text-white"><h4 class="m-0">Checkout Page</h4></div>
         <div class="row">
             <div class="col-lg-8">
                 <div class="cart-product">
@@ -21,8 +21,8 @@
                         <tr>
                             <td>{{$item->name}}</td>
                             <td>{{$item->qty}}</td>
-                            <td>&#8369;{{$item->price}}</td>
-                            <td>&#8369;{{$item->subtotal()}}</td>
+                            <td>Rp. {{$item->price}}</td>
+                            <td>Rp. {{$item->subtotal()}}</td>
                         </tr>
                         @endforeach
                         </tbody>
@@ -61,7 +61,7 @@
                         <div class="payment-area my-4 py-5 px-3 bg-light">
                             <input type="submit" value="Proceed to payment" class="btn btn-primary">
                         </div>
-                    </form>
+                    </form>z
                 </div>
             </div>
             <div class="col-lg-4">
@@ -72,9 +72,9 @@
                         </div>
                         <div class="card-body">
                             <p>Total products = {{Cart::content()->count()}}</p>
-                            <p>Product Cost = &#8369;{{Cart::total()}}</p>
-                            <p>Shipping cost = &#8369;0.00 </p>
-                            <p><strong>Total cost = &#8369;{{Cart::total()}}</strong></p>
+                            <p>Product Cost = Rp. {{Cart::total()}}</p>
+                            <p>Shipping cost = Rp. 0.00 </p>
+                            <p><strong>Total cost = Rp. {{Cart::total()}}</strong></p>
                         </div>
                     </div>
                 </div>

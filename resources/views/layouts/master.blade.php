@@ -1,82 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>@yield('title', 'Bookshop - Home')</title>
-    <!-- Favicon icon -->
-    <link rel="icon" href="{{asset('/')}}assets/img/favicon.png" type="image/x-icon">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('/')}}assets/css/all.min.css">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{asset('/')}}assets/css/bootstrap.min.css">
     <!-- Your custom styles (optional) -->
     <link rel="stylesheet" href="{{asset('/')}}assets/css/style.css">
+
+    <meta charset="utf-8">
+    <title>PT Kuantum Buku Sejahtera | Penerbit dengan Pelayanan Terbaik dan Terpercaya!</title>
+    <meta name="description" content="Quantum Book hadir di tengah-tengah masyarakat untuk melengkapi dan memenuhi permasalahan kebutuhan buku-buku khususnya buku SMK, Serta menjadi media untuk memenuhi kebutuhan ilmu bagi dunia pendidikan kejuruan yang lebih baik.">
+    <meta name="keywords" content="quantum, book, quantum book, buku, sejahtera, malang, jawa timur, indonesia">
+    <meta name="author" content="Vokanesia">
+    <!-- Stylesheets -->
+    <link href="http://127.0.0.1/quantumbook-main/themes/css/bootstrap.css" rel="stylesheet">
+    <link href="http://127.0.0.1/quantumbook-main/themes/css/style.css" rel="stylesheet">
+    <link href="http://127.0.0.1/quantumbook-main/themes/css/responsive.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/2a563a7704.js"></script>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&amp;family=Nunito+Sans:wght@300;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Color Switcher Mockup -->
+    <link href="http://127.0.0.1/quantumbook-main/themes/css/color-switcher-design.css" rel="stylesheet">
+
+    <!-- Color Themes -->
+    <link id="theme-color-file" href="http://127.0.0.1/quantumbook-main/themes/css/color-themes/default-theme.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="http://127.0.0.1/quantumbook-main/themes/images/ico-quantum-book.png" type="image/x-icon">
+    <link rel="icon" href="http://127.0.0.1/quantumbook-main/themes/images/ico-quantum-book.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
 </head>
 <body>
-<!-- NAVBAR -->
+
+    <!-- NAVBAR -->
     @include('layouts.includes.navbar')
 <!-- NAVBAR END -->
-<!-- HEADER -->
-<section class="header py-2 bg-dark">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="headings">
-                    <h3><a href="{{route('bookshop.home')}}" class="text-secondary"><b class="text-danger">Book</b> Shop</a></h3>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <form action="{{route('all-books')}}">
-                    <div class="input-group input-group-sm m-1">
-                        <input type="text" name="term" value="{{request('term')}}" class="form-control" placeholder="Search Book..">
-                        <div class="input-group-append">
-                            <button class="btn btn-danger" type="submit">Search</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-md-4">
-                <div class="shopping-cart text-right">
-                    <a href="{{route('cart')}}" class="text-danger"><i class="fas fa-shopping-cart fa-2x m-1"></i>
-                        @if(Cart::content()->count())
-                            <span class="count-cart">{{Cart::content()->count()}}</span>
-                        @endif
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- HEADER END -->
 
 @yield('content')
 
-<footer class="py-3 text-center border-top bg-light">
-    <div class="container">
-        <div class="go-to-top mb-2">
-            <a href="#nav-top" class="text-muted" title="Go to top"><i class="fas fa-angle-double-up"></i></a>
+<footer class="main-footer">
+    <div class="pattern-layer-one"
+        style="background-image: url(http://127.0.0.1/quantumbook-main/themes/images/background/pattern-14.png)"></div>
+    <div class="pattern-layer-two"
+        style="background-image: url(http://127.0.0.1/quantumbook-main/themes/images/background/pattern-15.png)"></div>
+    <!--Waves end-->
+    <div class="auto-container">
+        <!--Widgets Section-->
+        <div class="widgets-section">
+            <div class="row clearfix">
+
+                <!-- Column -->
+                <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="row clearfix">
+
+                        <!-- Footer Column -->
+                        <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                            <div class="footer-widget logo-widget">
+                                <div class="logo">
+                                    <a href="http://127.0.0.1/quantumbook-main/"><img
+                                            src="http://127.0.0.1/quantumbook-main/themes/images/logo-quantum-book-white.png"
+                                            alt="" /></a>
+                                </div>
+                                                                        <div class="text"><p>PT. Kuantum Buku Sejahtera adalah salah satu perusahaan yang bergerak di bidang penerbitan dan pendistribusian buku khususnya buku-buku SMK di seluruh Indonesia. PT Kuantum Buku Sejahtera&#8230;</div>
+                                <!-- Social Box -->
+                                <ul class="social-box">
+                                    <li><a href="" class="fa fa-facebook-f"
+                                            target="_blank"></a></li>
+                                    <li><a href="https://www.instagram.com/quantumbook.id" class="fa fa-instagram"
+                                            target="_blank"></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCUQDbcDgBskeDiJbcRGtAaA" class="fa fa-youtube"
+                                            target="_blank"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Footer Column -->
+                        <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                            <div class="footer-widget links-widget">
+                                <h5>Link Cepat</h5>
+                                <ul class="list-link">
+                                    <li><a href="http://127.0.0.1/quantumbook-main/page/tentang-kami">Tentang Kami</a></li>
+                                    <li><a href="http://127.0.0.1/quantumbook-main/page/visi-dan-misi">Visi dan Misi</a></li>
+                                    <li><a href="http://127.0.0.1/quantumbook-main/page/layanan">Layanan</a></li>
+                                    <li><a href="http://127.0.0.1/quantumbook-main/products">Produk</a></li>
+                                    <li><a href="http://127.0.0.1/quantumbook-main/blogs">Blog</a></li>
+                                    <li><a href="http://127.0.0.1/quantumbook-main/contact">Kontak</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Column -->
+                <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="row clearfix">
+
+                        <!-- Footer Column -->
+                        <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                            <div class="footer-widget" style="color: white">
+                                <h5>Hubungi Kami</h5>
+                                <ul>
+                                    <li>
+                                        
+                                        <strong><i class="fa fa-map-marker" aria-hidden="true"></i>Address</strong>
+                                        Jl. Pondok Blimbing Indah Selatan X N6 No.5 Kota Malang - Jawa Timur                                            </li>
+                                    <li>
+                                        <i class="fa fa-phone-square" aria-hidden="true"></i>
+                                        <strong>Phone</strong>
+                                        <a
+                                            href="tel:+62 822-9951-2221" style="color: white">+62 822-9951-2221</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+                                        <strong>E-Mail</strong>
+                                        <a
+                                            href="mailto:office@quantumbook.id" style="color: white">office@quantumbook.id</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="footer-text">
-            Copyright &copy; Bookshop Management System. All Right Reserved. <span id="year"></span>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <!-- Column -->
+                    <div class="column col-lg-6 col-md-12 col-sm-12">
+                        <div class="copyright">Copyright &copy; 2022 PT Kuantum Buku Sejahtera.
+                            All Rights Reserved.</div>
+                    </div>
+                    <!-- Column -->
+                    <div class="column col-lg-6 col-md-12 col-sm-12">
+                        <ul class="footer-nav">
+                            <li><a href="http://127.0.0.1/quantumbook-main/page/tentang-kami">About Us</a></li>
+                            <li><a href="http://127.0.0.1/quantumbook-main/page/terms-of-service">Terms of service</a></li>
+                            <li><a href="http://127.0.0.1/quantumbook-main/page/privacy-policy">Privacy policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="social-icon mt-2">
-        <span class="mr-2">
-          <a href="#" class="text-primary"><i class="fab fa-facebook fa-2x"></i></a>
-        </span>
-            <span class="mr-2">
-          <a href="#" class="text-secondary"><i class="fab fa-github fa-2x"></i></a>
-        </span>
-            <span class="mr-2">
-          <a href="#" class="text-warning"><i class="fab fa-stack-overflow fa-2x"></i></a>
-        </span>
-        </div>
+
     </div>
 </footer>
 
 
+ <!-- Search Popup -->
+ <div class="search-popup">
+    <button class="close-search style-two">X</button>
+    <button class="close-search"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+    </button>
+    <form action="{{route('all-books')}}">
+        <div class="input-group input-group-sm m-1">
+            <input type="text" name="term" value="{{request('term')}}" class="form-control" placeholder="Search Book..">
+            <div class="input-group-append">
+                <button class="btn btn-danger" type="submit">Search</button>
+            </div>
+        </div>
+    </form>
+    <div class="form-group">
+        <input type="text" name="q" value="" placeholder="Cari Produk" required="">
+        <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    </form>    </div>
+<!-- End Header Search -->
+
+<!-- Sidebar Cart Item -->
+<div class="xs-sidebar-group info-group">
+    <div class="xs-overlay xs-bg-black"></div>
+    <div class="xs-sidebar-widget">
+        <div class="sidebar-widget-container">
+            <div class="widget-heading">
+                <a href="#" class="close-side-widget">
+                    X
+                </a>
+            </div>
+            <div class="sidebar-textwidget">
+
+                <!-- Sidebar Info Content -->
+                <div class="sidebar-info-contents">
+                    <div class="content-inner">
+                        <div class="logo">
+                            <a href="http://127.0.0.1/quantumbook-main/"><img
+                                    src="http://127.0.0.1/quantumbook-main/themes/images/logo-quantum-book-white.png"
+                                    alt="" /></a>
+                        </div>
+                        <div class="content-box">
+                                                                <h2>Tentang Kami</h2>
+                            <p class="text"><p>PT. Kuantum Buku Sejahtera adalah salah satu perusahaan yang bergerak di bidang penerbitan dan pendistribusian buku khususnya buku-buku SMK di seluruh Indonesia. PT Kuantum Buku Sejahtera atau yang dapat disebut&#8230;</p>
+                            <a href="http://127.0.0.1/quantumbook-main/contact" class="theme-btn btn-style-two"><span
+                                    class="txt">Konsultasi</span></a>
+                        </div>
+                        <div class="contact-info">
+                            <h2>Contact Info</h2>
+                            <ul class="list-style-one">
+                                <li><span
+                                        class="icon fa fa-location-arrow"></span>Jl. Pondok Blimbing Indah Selatan X N6 No.5 Kota Malang - Jawa Timur                                        </li>
+                                <li><span class="icon fa fa-phone"></span>+62 822-9951-2221</li>
+                                <li><span class="icon fa fa-envelope"></span>office@quantumbook.id</li>
+                                <li><span class="icon fa fa-clock-o"></span>9.00 s/d 17.00 WIB</li>
+                            </ul>
+                        </div>
+                        <!-- Social Box -->
+                        <ul class="social-box">
+                            <li class="facebook"><a href=""
+                                    class="fa fa-facebook-f"></a></li>
+                            <li class="instagram"><a href="https://www.instagram.com/quantumbook.id"
+                                    class="fa fa-instagram"></a></li>
+                            <!-- <li class="twitter"><a href="#" class="fa fa-twitter"></a></li> -->
+                            <!-- <li class="linkedin"><a href="#" class="fa fa-linkedin"></a></li> -->
+                            <li class="youtube"><a href="https://www.youtube.com/channel/UCUQDbcDgBskeDiJbcRGtAaA"
+                                    class="fa fa-youtube"></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END sidebar widget item -->
+
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+<script src="http://127.0.0.1/quantumbook-main/themes/js/jquery.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/popper.min.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/bootstrap.min.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/jquery.fancybox.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/appear.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/parallax.min.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/tilt.jquery.min.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/jquery.paroller.min.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/owl.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/mixitup.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/wow.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/nav-tool.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/jquery-ui.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/jquery.bootstrap-touchspin.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/script.js"></script>
+<script src="http://127.0.0.1/quantumbook-main/themes/js/color-settings.js"></script>
 
 <!-- jQuery -->
 <script type="text/javascript" src="{{asset('/')}}assets/js/jquery.min.js"></script>

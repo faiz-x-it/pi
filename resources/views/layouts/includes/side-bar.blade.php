@@ -1,7 +1,7 @@
 <div class="col-md-4">
     <div class="sidebar-items">
         <div class="card my-4">
-            <div class="card-header bg-dark text-white">
+            <div class="card-header bg-primary text-white">
                 <h4>Books Ctaegories</h4>
             </div>
             <div class="card-body">
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="card my-3">
-            <div class="card-header bg-dark text-white">
+            <div class="card-header bg-primary text-white">
                 <h4>Recent Books</h4>
             </div>
             <div class="card-body">

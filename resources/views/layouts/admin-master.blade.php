@@ -9,9 +9,21 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bookshop admin - Dashboard</title>
-    <!-- Favicon icon -->
-    <link rel="icon" href="{{asset('/')}}assets/img/favicon-2.png" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Admin | PT Kuantum Buku Sejahtera</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="http://localhost/quantumbook-main/themes/images/ico-quantum-book.png" type="image/x-icon">
+    <link rel="icon" href="http://localhost/quantumbook-main/themes/images/ico-quantum-book.png" type="image/x-icon">
+
+    <!-- Plugins css -->
+    
+    <link href="http://localhost/quantumbook-main/assets/backend/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="http://localhost/quantumbook-main/assets/backend/assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="http://localhost/quantumbook-main/assets/backend/assets/css/style.css" rel="stylesheet" type="text/css">
+
     <!-- Custom fonts for this template-->
     <link href="{{asset('/')}}admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -25,46 +37,80 @@
 
 </head>
 
-<body id="page-top">
+<body class="fixed-left">
 
-<!-- Page Wrapper -->
-<div id="wrapper">
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Begin page -->
+    <div id="wrapper">
 
     <!-- Sidebar -->
     @include('layouts.includes.admin-sidebar')
     <!-- End of Sidebar -->
-
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-
-        <!-- Main Content -->
-        <div id="content">
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
 
             <!-- Topbar -->
             @include('layouts.includes.admin-topbar')
             <!-- End of Topbar -->
 
+            <div class="page-content-wrapper ">
+
+                <div class="container-fluid">
+                     <!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
             <!-- Begin Page Content -->
             @yield('content')
+        </div><!-- container fluid -->
 
-        </div>
-        <!-- End of Main Content -->
+    </div> <!-- Page content Wrapper -->
 
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; <strong>Bookshop Management System. All right reserved. </strong> <span id="year"></span></span>
-                </div>
-            </div>
-        </footer>
-        <!-- End of Footer -->
+</div> <!-- content -->
 
-    </div>
-    <!-- End of Content Wrapper -->
+<footer class="footer">
+    © 2022 PT. Vokasi Indonesia Sejahtera
+</footer>
 
 </div>
-<!-- End of Page Wrapper -->
+<!-- End Right content here -->
+
+</div>
+<!-- END wrapper -->
+
+
+<!-- jQuery  -->
+<script src="http://localhost/quantumbook-main/assets/backend/assets/js/jquery.min.js"></script>
+<script src="http://localhost/quantumbook-main/assets/backend/assets/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost/quantumbook-main/assets/backend/assets/js/modernizr.min.js"></script>
+<script src="http://localhost/quantumbook-main/assets/backend/assets/js/detect.js"></script>
+<script src="http://localhost/quantumbook-main/assets/backend/assets/js/fastclick.js"></script>
+<script src="http://localhost/quantumbook-main/assets/backend/assets/js/jquery.slimscroll.js"></script>
+<script src="http://localhost/quantumbook-main/assets/backend/assets/js/jquery.blockUI.js"></script>
+<script src="http://localhost/quantumbook-main/assets/backend/assets/js/waves.js"></script>
+<script src="http://localhost/quantumbook-main/assets/backend/assets/js/jquery.nicescroll.js"></script>
+<script src="http://localhost/quantumbook-main/assets/backend/assets/js/jquery.scrollTo.min.js"></script>
+
+<!-- Plugins js -->
+
+<!-- App js -->
+<script src="http://localhost/quantumbook-main/assets/backend/assets/js/app.js"></script>
+
+</body>
+
+</html>
 
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">

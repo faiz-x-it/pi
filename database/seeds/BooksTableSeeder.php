@@ -23,8 +23,8 @@ class BooksTableSeeder extends Seeder
 
         for ($i = 1; $i <= 50; $i++)
         {
-
-            $init_price = rand(250, 400);
+            
+            $init_price = rand(100, 200).'000';
             $discount_rate = rand(0,5);
             $count_discount = (($init_price * $discount_rate)/100);
             $final_price = $init_price - $count_discount;

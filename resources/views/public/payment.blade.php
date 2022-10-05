@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="payment-area">
-            <h4 class="my-4 bg-dark p-3 text-white">Make your payment</h4>
+            <h4 class="my-4 bg-primary p-3 text-white">Make your payment</h4>
 
             <div class="cart-summary my-3">
                 <div class="card">
@@ -12,9 +12,9 @@
                     </div>
                     <div class="card-body">
                         <p>Total products = {{Cart::content()->count()}}</p>
-                        <p>Product Cost = &#8369;{{Cart::total()}}</p>
-                        <p>Shipping cost = &#8369;0.00</p>
-                        <p><strong>Total cost = &#8369;{{Cart::total()}}</strong></p>
+                        <p>Product Cost = Rp. {{Cart::total()}}</p>
+                        <p>Shipping cost = Rp. 0.00</p>
+                        <p><strong>Total cost = Rp. {{Cart::total()}}</strong></p>
                     </div>
                 </div>
             </div>
@@ -23,6 +23,7 @@
                 <form action="{{route('cart.checkout')}}" method="post">
                     @csrf
                     <input type="hidden" name="cart_total" value="{{Cart::total()}}">
+                    {{-- <input type="submit" value="bayar"> --}}
                     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                             data-key="pk_test_7xVvmxzKaoeFzuBZZ18WdwKy00bmfx80CA"
                             data-amount=""
